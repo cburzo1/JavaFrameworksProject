@@ -1,0 +1,143 @@
+NOTE:
+    prompt C
+    filename: mainscreen.html
+    line number: 14
+    Change: changed "My Bicycle Shop" to "My Computer Shop"
+
+NOTE:
+    prompt C
+    filename: mainscreen.html
+    line number: 19
+    Change: changed "Shop" to "Computer Shop" 
+
+NOTE:
+    prompt D
+    filename: mainscreen.html
+    line number: 122
+    Change: <!--Added a static link to the about page-->
+
+** Created About.html
+
+NOTE:
+    prompt D
+    filename: MainscreenScreenController.java
+    line number: 83
+    Change: Added route to /About Page
+
+NOTE:
+    prompt E
+    filename: MainscreenScreenController.java
+    line number: 50 - 69
+    Change: Added static sample arrays for product
+
+NOTE:
+    prompt E
+    filename: MainscreenScreenController.java
+    line number: 50 - 69
+    Change: Added static sample arrays for product and part
+
+NOTE:
+    prompt E
+    filename: mainscreen.html
+    line number: 42, 56, 94, 107
+    Change: Created an if else statement using thymeleaf which displays the 
+	sample inventory if there are no products or parts in the database.
+	the sample inventory goes away when you put parts and products into the
+	database by adding them, but will reapear if you delete all products
+	in the database.
+
+NOTE:
+    prompt F
+    filename: mainscreen.html
+    line number: 65, 116
+    Change: Added 'Buy Now' buttons
+
+NOTE:
+    prompt F
+    filename: AddProductController.java
+    line number: 196
+    Change: Added Decrement functionailty for the 'Buy Now' buttons
+
+NOTE:
+    prompt F
+    filename: AddPartController.java
+    line number: 69
+    Change: Added Decrement functionailty for the 'Buy Now' buttons
+
+NOTE:
+    prompt F
+    filename: AddProductController.java
+    line number: 57
+    Change: Fixed the inventory calculation in the loop to make it take inventory from the existing
+    parts if there is enough inventory
+
+** Created confirmationDecrementProduct.html which appears after you hit 'Buy Now'
+
+NOTE:
+    prompt G
+    filename: Part.java
+    line number: 32, 38, 62, 114,188,122, 126 
+    Change: Added minimum and maximum inventory to the domain along with the
+	setters and getters. I also added the max and min to the overloaded
+	constructor so I can use it for my sample inventory.
+
+NOTE:
+    prompt G
+    filename: Part.java
+    line number: 20
+    Change:
+
+   NOTE:
+    prompt G
+    filename: Part.java
+    line number: 20
+    Change: Added a reference to parent class to instantiate the sample parts
+    	This was nessesary because the Part class is a default class and cannot be instantiated
+    	from the outside
+
+NOTE:
+    prompt G
+    filename: InhousePartForm.html
+    line number: 24 - 37
+    Change: Added minimum and maximum fields to the form
+
+NOTE:
+    prompt G
+    filename: OutsourcedPartForm.html
+    line number: 25 - 37
+    Change: Added minimum and maximum fields to the form
+
+** Created isBetweenMaxMin and isBetweenMaxMinValidator to enforce that the user input is between
+max and min
+
+NOTE:
+    prompt G
+    filename: Part.java
+    line number: 17
+    Change: Added annotation to call validator if the user enters out-of-bounds for
+	max and min fields
+
+** When you type an inventory that is out of the bounds of your max and min and press submit
+the errors will trigger in the binding result and be displayed accordingly in the form
+
+NOTE:
+    prompt H
+    filename: Part.java
+    line number: 40
+    Change: Fixed the iteration for the associated parts so that there is an inventory check for
+	each associated part on the product. If the inventory of products is greater than the 
+	associated parts, it will throw an error on that form
+
+NOTE:
+    prompt I
+    filename: PartTest.java
+    line number: 105 - 139
+    Change: Added required tests for max and min
+
+** Removed the delete validator as it was not in use
+
+NOTE:
+    prompt J
+    filename: Part.java
+    line number: 105 - 139
+    Change: Removed the annotation for delete validator
